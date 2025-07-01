@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Hotel Rajeshwar</title>
+
+  <!-- Tailwind CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+  <!-- AOS Animation -->
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+
+  <style>
+    .hero {
+      background-image: url('hotel images/IMG_3526.JPG');
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      height: 90vh;
+      position: relative;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .hero::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: rgba(0, 0, 0, 0.5);
+      z-index: 1;
+    }
+    .hero-content {
+      position: relative;
+      z-index: 2;
+      text-align: center;
+      color: white;
+      animation: slideIn 1s ease-out forwards;
+      opacity: 0;
+    }
+    @keyframes slideIn {
+      0% {
+        transform: translateY(60px);
+        opacity: 0;
+      }
+      100% {
+        transform: translateY(0);
+        opacity: 1;
+      }
+    }
+    .info-box:hover {
+      transform: translateY(-6px);
+      box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+    }
+  </style>
+</head>
+<body class="bg-gray-100 text-gray-900">
+
+  <!-- Navigation -->
+  <header class="bg-white shadow-lg sticky top-0 z-50">
+    <div class="max-w-6xl mx-auto px-4 py-4 flex justify-between items-center">
+      <h1 class="text-2xl font-bold text-indigo-700 hover:text-indigo-900 transition duration-300">Hotel Rajeshwar</h1>
+      <nav>
+        <ul class="flex space-x-6 font-medium">
+          <li><a href="index.html" class="hover:text-indigo-600 transition">Home</a></li>
+          <li><a href="rooms.html" class="hover:text-indigo-600 transition">Rooms</a></li>
+          <li><a href="booking.html" class="hover:text-indigo-600 transition">Book Now</a></li>
+          <li><a href="contact.html" class="hover:text-indigo-600 transition">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="hero" data-aos="zoom-in">
+    <div class="hero-content">
+      <h1 class="text-5xl md:text-7xl font-extrabold drop-shadow-xl mb-4">Welcome To Hotel Rajeshwar</h1>
+      <p class="text-xl md:text-2xl mb-6 drop-shadow">Luxury & Comfort in Gadarwara</p>
+      <a href="booking.html" class="bg-indigo-600 hover:bg-indigo-700 text-white px-8 py-3 rounded-full shadow-lg transition duration-300">Book Now</a>
+    </div>
+  </section>
+
+  <!-- Hotel Info Section -->
+  <section class="py-20 bg-gradient-to-b from-white to-blue-50" data-aos="fade-up">
+    <div class="max-w-5xl mx-auto px-6 text-center">
+      <h2 class="text-4xl font-bold text-indigo-800 mb-10">Hotel Information</h2>
+      <div class="grid md:grid-cols-2 gap-6">
+        <div class="info-box bg-white p-6 rounded-xl shadow-md text-left transition duration-300" data-aos="fade-up">
+          <h3 class="text-xl font-semibold mb-2">📍 Location</h3>
+          <p>WQ9P+625 Bhama Ward, Gadarwara, Madhya Pradesh 487551</p>
+          <h3 class="text-xl font-semibold mb-2">🕒 Timings</h3>
+          <p>Check-in: 12:00 PM<br>Check-out: 12:00 PM</p>
+          </div>
+
+          <div class="info-box bg-white p-6 rounded-xl shadow-md text-left transition duration-300" data-aos="fade-up">
+          <h3 class="text-xl font-semibold mb-2">🏨 Room Types</h3>
+          <ul class="list-disc ml-6">
+            <li>Standard Non-AC: ₹1000</li>
+            <li>Standard AC: ₹1500</li>
+            <li>Deluxe AC: ₹2000</li>
+            <li>Extra Person: ₹400</li>
+            <li>Dormitory: ₹500</li>
+          </ul>
+        </div>
+             </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-white py-4 shadow-inner">
+    <div class="text-center text-gray-600 text-sm">
+      &copy; 2025 Hotel Rajeshwar | Gadarwara, MP
+    </div>
+  </footer>
+
+  <!-- JS Libraries -->
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>
+    AOS.init();
+    window.addEventListener('DOMContentLoaded', () => {
+      document.querySelector('.hero-content').classList.add('visible');
+    });
+  </script>
+
+
+<!-- 🌍 Our Location Section -->
+<section style="padding: 40px 20px; background-color: #f9f9f9;">
+  <h2 style="text-align: center; color: #1e40af; font-weight: 700; font-size: 2rem; margin-bottom: 20px;">
+    Our Location
+  </h2>
+  <div style="display: flex; justify-content: center;">
+    <iframe 
+      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d14699.383051551936!2d78.79360088070337!3d22.740566267381736!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3981b3fc9d0b30d3%3A0x8b2e3f2b2d1a6ed2!2sHotel%20Rajeshwar%2C%20WQ9P%2B625%2C%20Bhama%20Ward%2C%20Gadarwara%2C%20Madhya%20Pradesh%20487551!5e0!3m2!1sen!2sin!4v1719834089853!5m2!1sen!2sin" 
+      width="600" 
+      height="400" 
+      style="border:0; border-radius: 16px; box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);" 
+      allowfullscreen="" 
+      loading="lazy" 
+      referrerpolicy="no-referrer-when-downgrade">
+    </iframe>
+  </div>
+</section>
+
+</body>
+</html>

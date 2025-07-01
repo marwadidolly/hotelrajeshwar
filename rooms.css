@@ -1,0 +1,44 @@
+.room-card {
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+  transform: scale(1);
+  opacity: 0;
+  transform: translateY(50px);
+}
+
+.room-card.show {
+  opacity: 1;
+  transform: translateY(0) scale(1.02);
+  box-shadow: 0 12px 28px rgba(0, 0, 0, 0.15);
+}
+
+.room-card:hover {
+  transform: scale(1.04);
+  box-shadow: 0 16px 32px rgba(0, 0, 0, 0.2);
+}
+
+
+/*Hotel Rajeshwar title hover effect */
+.header-title {
+  color: #2563eb; /* Blue */
+  font-weight: bold;
+  transition: color 0.3s ease;
+}
+
+.header-title:hover {
+  color: #1e40af; /* Darker blue on hover */
+}
+
+/* Our Rooms heading hover effect */
+.section-heading {
+  color: #2563eb; /* Blue */
+  transition: transform 0.3s ease, color 0.3s ease;
+  cursor: pointer;
+}
+
+.section-heading:hover {
+  color: #1e40af; /* Darker blue */
+  transform: translateY(-3px); /* Slight move up */
+}
