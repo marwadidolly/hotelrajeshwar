@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -16,12 +17,14 @@
       background-size: cover;
       background-position: center;
       background-repeat: no-repeat;
-      height: 90vh;
+      height: 100vh;
       position: relative;
       display: flex;
-      align-items: center;
+      flex-direction: column;
       justify-content: center;
+      align-items: center;
     }
+
     .hero::before {
       content: "";
       position: absolute;
@@ -29,6 +32,7 @@
       background: rgba(0, 0, 0, 0.5);
       z-index: 1;
     }
+
     .hero-content {
       position: relative;
       z-index: 2;
@@ -37,6 +41,7 @@
       animation: slideIn 1s ease-out forwards;
       opacity: 0;
     }
+
     @keyframes slideIn {
       0% {
         transform: translateY(60px);
@@ -47,35 +52,59 @@
         opacity: 1;
       }
     }
+
     .info-box:hover {
       transform: translateY(-6px);
       box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
     }
+
+    .nav-overlay {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      z-index: 2;
+      padding: 1rem 2rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .nav-overlay a {
+      color: white;
+      font-weight: 500;
+      transition: color 0.3s;
+    }
+
+    .nav-overlay a:hover {
+      color: #cbd5e1;
+    }
   </style>
 </head>
+
 <body class="bg-gray-100 text-gray-900">
 
-  <!-- Navigation -->
-  <header class="bg-white shadow-lg sticky top-0 z-50">
-    <div class="max-w-6xl mx-auto px-4 py-4 flex justify-between items-center">
-      <h1 class="text-2xl font-bold text-indigo-700 hover:text-indigo-900 transition duration-300">Hotel Rajeshwar</h1>
+  <!-- Hero Section with Navbar on Image -->
+  <section class="hero" data-aos="zoom-in">
+    
+    <!-- Navigation Bar OVER background image -->
+    <div class="nav-overlay">
+      <h1 class="text-2xl font-bold text-white">Hotel Rajeshwar</h1>
       <nav>
-        <ul class="flex space-x-6 font-medium">
-          <li><a href="index.html" class="hover:text-indigo-600 transition">Home</a></li>
-          <li><a href="rooms.html" class="hover:text-indigo-600 transition">Rooms</a></li>
-          <li><a href="booking.html" class="hover:text-indigo-600 transition">Book Now</a></li>
-          <li><a href="contact.html" class="hover:text-indigo-600 transition">Contact</a></li>
+        <ul class="flex space-x-6">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="rooms.html">Rooms</a></li>
+          <li><a href="booking.html">Book Now</a></li>
+          <li><a href="contact.html">Contact</a></li>
         </ul>
       </nav>
     </div>
-  </header>
 
-  <!-- Hero Section -->
-  <section class="hero" data-aos="zoom-in">
+    <!-- Hero Text -->
     <div class="hero-content">
       <h1 class="text-5xl md:text-7xl font-extrabold drop-shadow-xl mb-4">Welcome To Hotel Rajeshwar</h1>
       <p class="text-xl md:text-2xl mb-6 drop-shadow">Luxury & Comfort in Gadarwara</p>
-      <a href="booking.html" class="bg-indigo-600 hover:bg-indigo-700 text-white px-8 py-3 rounded-full shadow-lg transition duration-300">Book Now</a>
+      <a href="booking.html" class="bg-white text-indigo-700 px-8 py-3 rounded-full shadow-lg transition duration-300">Book Now</a>
     </div>
   </section>
 
@@ -89,9 +118,9 @@
           <p>WQ9P+625 Bhama Ward, Gadarwara, Madhya Pradesh 487551</p>
           <h3 class="text-xl font-semibold mb-2">🕒 Timings</h3>
           <p>Check-in: 12:00 PM<br>Check-out: 12:00 PM</p>
-          </div>
+        </div>
 
-          <div class="info-box bg-white p-6 rounded-xl shadow-md text-left transition duration-300" data-aos="fade-up">
+        <div class="info-box bg-white p-6 rounded-xl shadow-md text-left transition duration-300" data-aos="fade-up">
           <h3 class="text-xl font-semibold mb-2">🏨 Room Types</h3>
           <ul class="list-disc ml-6">
             <li>Standard Non-AC: ₹1000</li>
@@ -101,7 +130,7 @@
             <li>Dormitory: ₹500</li>
           </ul>
         </div>
-             </div>
+      </div>
     </div>
   </section>
 
@@ -121,24 +150,23 @@
     });
   </script>
 
-
-<!-- 🌍 Our Location Section -->
-<section style="padding: 40px 20px; background-color: #f9f9f9;">
-  <h2 style="text-align: center; color: #1e40af; font-weight: 700; font-size: 2rem; margin-bottom: 20px;">
-    Our Location
-  </h2>
-  <div style="display: flex; justify-content: center;">
-    <iframe 
-      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d14699.383051551936!2d78.79360088070337!3d22.740566267381736!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3981b3fc9d0b30d3%3A0x8b2e3f2b2d1a6ed2!2sHotel%20Rajeshwar%2C%20WQ9P%2B625%2C%20Bhama%20Ward%2C%20Gadarwara%2C%20Madhya%20Pradesh%20487551!5e0!3m2!1sen!2sin!4v1719834089853!5m2!1sen!2sin" 
-      width="600" 
-      height="400" 
-      style="border:0; border-radius: 16px; box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);" 
-      allowfullscreen="" 
-      loading="lazy" 
-      referrerpolicy="no-referrer-when-downgrade">
-    </iframe>
-  </div>
-</section>
+  <!-- Location Section -->
+  <section style="padding: 40px 20px; background-color: #f9f9f9;">
+    <h2 style="text-align: center; color: #1e40af; font-weight: 700; font-size: 2rem; margin-bottom: 20px;">
+      Our Location
+    </h2>
+    <div style="display: flex; justify-content: center;">
+      <iframe 
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d14699.383051551936!2d78.79360088070337!3d22.740566267381736!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3981b3fc9d0b30d3%3A0x8b2e3f2b2d1a6ed2!2sHotel%20Rajeshwar%2C%20WQ9P%2B625%2C%20Bhama%20Ward%2C%20Gadarwara%2C%20Madhya%20Pradesh%20487551!5e0!3m2!1sen!2sin!4v1719834089853!5m2!1sen!2sin" 
+        width="600" 
+        height="400" 
+        style="border:0; border-radius: 16px; box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);" 
+        allowfullscreen="" 
+        loading="lazy" 
+        referrerpolicy="no-referrer-when-downgrade">
+      </iframe>
+    </div>
+  </section>
 
 </body>
 </html>
