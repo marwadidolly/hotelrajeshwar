@@ -12,8 +12,9 @@
   <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
 
   <style>
+    /* Hero Section */
     .hero {
-      background-image: url('IMG_3526.JPG');
+      background-image: url('IMG_3526.JPG'); /* 👈 Change image path if needed */
       background-size: cover;
       background-position: center;
       background-repeat: no-repeat;
@@ -29,7 +30,7 @@
       content: "";
       position: absolute;
       inset: 0;
-      background: rgba(0, 0, 0, 0.5);
+      background: rgba(0, 0, 0, 0.4);
       z-index: 1;
     }
 
@@ -38,23 +39,25 @@
       z-index: 2;
       text-align: center;
       color: white;
-      animation: bounceIn 1.5s ease-out;
+      animation: bounceText 1.5s ease-in-out infinite;
+      text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.7);
     }
 
-    @keyframes bounceIn {
-      0% {
-        transform: scale(0.8);
-        opacity: 0;
+    @keyframes bounceText {
+      0%, 100% {
+        transform: translateY(0);
       }
-      60% {
-        transform: scale(1.1);
-        opacity: 1;
-      }
-      100% {
-        transform: scale(1);
+      50% {
+        transform: translateY(-15px);
       }
     }
 
+    .info-box:hover {
+      transform: translateY(-6px);
+      box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+    }
+
+    /* Navbar Overlay on Hero */
     .nav-overlay {
       position: absolute;
       top: 0;
@@ -77,19 +80,20 @@
       color: #cbd5e1;
     }
 
-    .info-box:hover {
-      transform: translateY(-6px);
-      box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+    .nav-title {
+      color: white;
+      font-size: 1.5rem;
+      font-weight: bold;
     }
   </style>
 </head>
 <body class="bg-gray-100 text-gray-900">
 
-  <!-- Hero Section with Navbar on Image -->
-  <section class="hero">
-    <!-- Navbar -->
+  <!-- Hero Section -->
+  <section class="hero" data-aos="fade-in">
+    <!-- Navbar over image -->
     <div class="nav-overlay">
-      <h1 class="text-2xl font-bold text-white">Hotel Rajeshwar</h1>
+      <h1 class="nav-title">Hotel Rajeshwar</h1>
       <nav>
         <ul class="flex space-x-6">
           <li><a href="index.html">Home</a></li>
@@ -100,11 +104,11 @@
       </nav>
     </div>
 
-    <!-- Animated Hero Text -->
+    <!-- Animated Welcome Text -->
     <div class="hero-content">
-      <h1 class="text-5xl md:text-7xl font-extrabold drop-shadow-xl mb-4">Welcome To Hotel Rajeshwar</h1>
-      <p class="text-xl md:text-2xl mb-6 drop-shadow">Luxury & Comfort in Gadarwara</p>
-      <a href="booking.html" class="bg-white text-indigo-700 px-8 py-3 rounded-full shadow-lg transition duration-300">Book Now</a>
+      <h1 class="text-5xl md:text-7xl font-extrabold mb-4">Welcome to Hotel Rajeshwar</h1>
+      <p class="text-xl md:text-2xl mb-6">Luxury & Comfort in Gadarwara</p>
+      <a href="booking.html" class="bg-white text-indigo-700 px-8 py-3 rounded-full shadow-lg transition duration-300 hover:bg-indigo-100">Book Now</a>
     </div>
   </section>
 
@@ -113,14 +117,13 @@
     <div class="max-w-5xl mx-auto px-6 text-center">
       <h2 class="text-4xl font-bold text-indigo-800 mb-10">Hotel Information</h2>
       <div class="grid md:grid-cols-2 gap-6">
-        <div class="info-box bg-white p-6 rounded-xl shadow-md text-left transition duration-300" data-aos="fade-up">
+        <div class="info-box bg-white p-6 rounded-xl shadow-md text-left transition duration-300" data-aos="fade-right">
           <h3 class="text-xl font-semibold mb-2">📍 Location</h3>
           <p>WQ9P+625 Bhama Ward, Gadarwara, Madhya Pradesh 487551</p>
-          <h3 class="text-xl font-semibold mb-2">🕒 Timings</h3>
+          <h3 class="text-xl font-semibold mb-2 mt-4">🕒 Timings</h3>
           <p>Check-in: 12:00 PM<br>Check-out: 12:00 PM</p>
         </div>
-
-        <div class="info-box bg-white p-6 rounded-xl shadow-md text-left transition duration-300" data-aos="fade-up">
+        <div class="info-box bg-white p-6 rounded-xl shadow-md text-left transition duration-300" data-aos="fade-left">
           <h3 class="text-xl font-semibold mb-2">🏨 Room Types</h3>
           <ul class="list-disc ml-6">
             <li>Standard Non-AC: ₹1000</li>
@@ -135,19 +138,16 @@
   </section>
 
   <!-- Location Section -->
-  <section style="padding: 40px 20px; background-color: #f9f9f9;">
-    <h2 style="text-align: center; color: #1e40af; font-weight: 700; font-size: 2rem; margin-bottom: 20px;">
-      Our Location
-    </h2>
-    <div style="display: flex; justify-content: center;">
+  <section class="py-12 bg-white" data-aos="fade-up">
+    <h2 class="text-3xl font-bold text-center text-indigo-800 mb-6">📌 Our Location</h2>
+    <div class="flex justify-center">
       <iframe 
         src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d14699.383051551936!2d78.79360088070337!3d22.740566267381736!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3981b3fc9d0b30d3%3A0x8b2e3f2b2d1a6ed2!2sHotel%20Rajeshwar%2C%20WQ9P%2B625%2C%20Bhama%20Ward%2C%20Gadarwara%2C%20Madhya%20Pradesh%20487551!5e0!3m2!1sen!2sin!4v1719834089853!5m2!1sen!2sin" 
         width="600" 
         height="400" 
         style="border:0; border-radius: 16px; box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);" 
         allowfullscreen="" 
-        loading="lazy" 
-        referrerpolicy="no-referrer-when-downgrade">
+        loading="lazy">
       </iframe>
     </div>
   </section>
@@ -159,11 +159,10 @@
     </div>
   </footer>
 
-  <!-- JS -->
+  <!-- AOS JS -->
   <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
   <script>
     AOS.init();
   </script>
 </body>
 </html>
-
