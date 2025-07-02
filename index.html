@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -6,7 +7,7 @@
   <title>Hotel Rajeshwar</title>
 
   <!-- Tailwind CSS -->
-  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet" />
   <!-- AOS Animation -->
   <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
 
@@ -37,24 +38,21 @@
       z-index: 2;
       text-align: center;
       color: white;
-      animation: slideIn 1s ease-out forwards;
-      opacity: 0;
+      animation: bounceIn 1.5s ease-out;
     }
 
-    @keyframes slideIn {
+    @keyframes bounceIn {
       0% {
-        transform: translateY(60px);
+        transform: scale(0.8);
         opacity: 0;
       }
-      100% {
-        transform: translateY(0);
+      60% {
+        transform: scale(1.1);
         opacity: 1;
       }
-    }
-
-    .info-box:hover {
-      transform: translateY(-6px);
-      box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+      100% {
+        transform: scale(1);
+      }
     }
 
     .nav-overlay {
@@ -78,15 +76,18 @@
     .nav-overlay a:hover {
       color: #cbd5e1;
     }
+
+    .info-box:hover {
+      transform: translateY(-6px);
+      box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+    }
   </style>
 </head>
-
 <body class="bg-gray-100 text-gray-900">
 
   <!-- Hero Section with Navbar on Image -->
-  <section class="hero" data-aos="zoom-in">
-    
-    <!-- Navigation Bar OVER background image -->
+  <section class="hero">
+    <!-- Navbar -->
     <div class="nav-overlay">
       <h1 class="text-2xl font-bold text-white">Hotel Rajeshwar</h1>
       <nav>
@@ -99,7 +100,7 @@
       </nav>
     </div>
 
-    <!-- Hero Text -->
+    <!-- Animated Hero Text -->
     <div class="hero-content">
       <h1 class="text-5xl md:text-7xl font-extrabold drop-shadow-xl mb-4">Welcome To Hotel Rajeshwar</h1>
       <p class="text-xl md:text-2xl mb-6 drop-shadow">Luxury & Comfort in Gadarwara</p>
@@ -133,22 +134,6 @@
     </div>
   </section>
 
-  <!-- Footer -->
-  <footer class="bg-white py-4 shadow-inner">
-    <div class="text-center text-gray-600 text-sm">
-      &copy; 2025 Hotel Rajeshwar | Gadarwara, MP
-    </div>
-  </footer>
-
-  <!-- JS Libraries -->
-  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-  <script>
-    AOS.init();
-    window.addEventListener('DOMContentLoaded', () => {
-      document.querySelector('.hero-content').classList.add('visible');
-    });
-  </script>
-
   <!-- Location Section -->
   <section style="padding: 40px 20px; background-color: #f9f9f9;">
     <h2 style="text-align: center; color: #1e40af; font-weight: 700; font-size: 2rem; margin-bottom: 20px;">
@@ -167,5 +152,18 @@
     </div>
   </section>
 
+  <!-- Footer -->
+  <footer class="bg-white py-4 shadow-inner">
+    <div class="text-center text-gray-600 text-sm">
+      &copy; 2025 Hotel Rajeshwar | Gadarwara, MP
+    </div>
+  </footer>
+
+  <!-- JS -->
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>
+    AOS.init();
+  </script>
 </body>
 </html>
+
