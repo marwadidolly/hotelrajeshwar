@@ -1,44 +1,66 @@
-.room-card {
-  border-radius: 16px;
-  overflow: hidden;
-  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
-  transition: transform 0.4s ease, box-shadow 0.4s ease;
-  transform: scale(1);
-  opacity: 0;
-  transform: translateY(50px);
-}
 
-.room-card.show {
-  opacity: 1;
-  transform: translateY(0) scale(1.02);
-  box-shadow: 0 12px 28px rgba(0, 0, 0, 0.15);
+.room-card {
+  position: relative;
+  overflow: hidden;
+  border-radius: 16px;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
 }
 
 .room-card:hover {
-  transform: scale(1.04);
+  transform: translateY(-6px) scale(1.02);
   box-shadow: 0 16px 32px rgba(0, 0, 0, 0.2);
 }
 
+.room-card img {
+  transition: transform 0.4s ease;
+}
 
-/*Hotel Rajeshwar title hover effect */
+.room-card:hover img {
+  transform: scale(1.05);
+}
+
+/* Navigation active color */
+nav a {
+  color: #2563eb;
+  transition: color 0.3s ease;
+}
+
+nav a:hover,
+nav a.active {
+  color: #1e40af;
+  font-weight: 600;
+}
+
+/* Title effect */
 .header-title {
-  color: #2563eb; /* Blue */
-  font-weight: bold;
+  color: #2563eb;
   transition: color 0.3s ease;
 }
 
 .header-title:hover {
-  color: #1e40af; /* Darker blue on hover */
+  color: #1e40af;
 }
 
-/* Our Rooms heading hover effect */
+/* Section heading */
 .section-heading {
-  color: #2563eb; /* Blue */
+  color: #2563eb;
   transition: transform 0.3s ease, color 0.3s ease;
   cursor: pointer;
 }
 
 .section-heading:hover {
-  color: #1e40af; /* Darker blue */
-  transform: translateY(-3px); /* Slight move up */
+  color: #1e40af;
+  transform: translateY(-3px);
 }
+
+
+---
+
+✅ rooms.js (For zoom effect using GLightbox)
+
+document.addEventListener("DOMContentLoaded", () => {
+  const lightbox = GLightbox({
+    selector: '.glightbox'
+  });
+});
