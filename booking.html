@@ -6,55 +6,7 @@
   <title>Booking - Hotel Rajeshwar</title>
   <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
   <link rel="stylesheet" href="booking.css">
-  <style>
-    .hamburger {
-      display: none;
-      flex-direction: column;
-      cursor: pointer;
-    }
-
-    .hamburger span {
-      height: 3px;
-      width: 25px;
-      background: #1e3a8a;
-      margin: 4px 0;
-      border-radius: 5px;
-      transition: 0.3s;
-    }
-
-    @media (max-width: 768px) {
-      .nav-links {
-        display: none;
-        flex-direction: column;
-        background: white;
-        position: absolute;
-        top: 100%;
-        right: 0;
-        width: 100%;
-        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-      }
-
-      .nav-links.active {
-        display: flex;
-      }
-
-      .hamburger {
-        display: flex;
-      }
-    }
-  </style>
-</head>
-<body class="bg-gray-100 text-gray-800">
-
-  <!-- Header -->
-  <header class="bg-white shadow-md sticky top-0 z-50">
-    <div class="container mx-auto px-4 py-4 flex justify-between items-center relative">
-      <h1 class="text-2xl font-bold text-blue-600">Hotel Rajeshwar</h1>
-      <div class="hamburger" onclick="toggleMenu()">
-        <span></span>
-        <span></span>
-        <span></span>
-      </div>
+  
       <nav>
         <ul class="nav-links flex space-x-6 md:flex-row">
           <li><a href="index.html" class="hover:text-blue-600">Home</a></li>
@@ -120,10 +72,6 @@
     &copy; 2025 Hotel Rajeshwar
   </footer>
 
-  <script>
-    function toggleMenu() {
-      document.querySelector('.nav-links').classList.toggle('active');
-    }
   </script>
   <script defer src="booking.js"></script>
 </body>
