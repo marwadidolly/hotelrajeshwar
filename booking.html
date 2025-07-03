@@ -3,33 +3,31 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Booking - Hotel Rajeshwar</title>
+  
+  <!-- Tailwind CSS CDN -->
   <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+  
+  <!-- AOS Animation CSS -->
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  
+  <!-- Custom CSS -->
   <link rel="stylesheet" href="booking.css">
 </head>
+
 <body class="bg-gray-100 text-gray-800">
 
-  <!-- Header / Navbar -->
+  <!-- Header -->
   <header class="bg-white shadow-md sticky top-0 z-50">
-    <div class="container mx-auto px-4 py-4 flex justify-between items-center relative">
-      <h1 class="text-2xl font-bold text-blue-600 hover:text-blue-800 transition">Hotel Rajeshwar</h1>
-
-      <!-- Hamburger Button (Mobile) -->
-      <div class="menu-toggle md:hidden" onclick="toggleMenu()">
-        <svg class="w-6 h-6 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-            d="M4 6h16M4 12h16M4 18h16" />
-        </svg>
-      </div>
-
-      <!-- Navigation Links -->
+    <div class="container mx-auto px-4 py-4 flex justify-between items-center">
+      <h1 class="text-xl font-bold text-blue-600">Hotel Rajeshwar</h1>
       <nav>
-        <ul class="nav-links flex space-x-6 md:flex md:space-x-6 md:static">
-          <li><a href="index.html" class="hover:text-blue-700 text-blue-600">Home</a></li>
-          <li><a href="rooms.html" class="hover:text-blue-700 text-blue-600">Rooms</a></li>
-          <li><a href="booking.html" class="text-blue-600 font-semibold">Book Now</a></li>
-          <li><a href="contact.html" class="hover:text-blue-700 text-blue-600">Contact</a></li>
+        <ul class="flex space-x-6">
+          <li><a href="index.html" class="text-blue-600 hover:text-blue-700">Home</a></li>
+          <li><a href="rooms.html" class="text-blue-600 hover:text-blue-700">Rooms</a></li>
+          <li><a href="booking.html" class="text-blue-600 font-semibold hover:text-blue-700">Book Now</a></li>
+          <li><a href="contact.html" class="text-blue-600 hover:text-blue-700">Contact</a></li>
         </ul>
       </nav>
     </div>
@@ -37,8 +35,18 @@
 
   <!-- Booking Section -->
   <section class="py-12 px-4 max-w-xl mx-auto">
-    <h2 class="text-3xl font-bold mb-6 text-center text-blue-600 hover:text-blue-800 transition">Online Booking</h2>
-    <form action="mailto:hotelrajeshwar01@gmail.com" method="POST" enctype="text/plain" class="bg-white p-6 rounded-xl shadow space-y-4">
+    <h2 class="text-3xl font-bold mb-6 text-center text-blue-600" data-aos="zoom-in">
+      Online Booking
+    </h2>
+
+    <form
+      action="mailto:hotelrajeshwar01@gmail.com"
+      method="POST"
+      enctype="text/plain"
+      class="bg-white p-6 rounded-xl shadow space-y-4"
+      data-aos="fade-up"
+      data-aos-duration="1000"
+    >
       <div>
         <label for="name" class="block font-medium mb-1">Full Name</label>
         <input type="text" id="name" name="name" required class="w-full p-2 border rounded" />
@@ -76,11 +84,15 @@
 
       <div>
         <label for="message" class="block font-medium mb-1">Special Requests (Optional)</label>
-        <p class="text-sm text-gray-600 mb-1">If you need more than one room or special preferences (AC + Non-AC, extra bed, etc), mention them here.</p>
+        <p class="text-sm text-gray-600 mb-1">
+          If you need more than one room or have special preferences (AC + Non-AC, extra bed, late check-in), please mention them here.
+        </p>
         <textarea id="message" name="message" rows="4" class="w-full p-2 border rounded"></textarea>
       </div>
 
-      <button type="submit" class="bg-blue-600 hover:bg-blue-700 text-white py-2 px-4 rounded transition">Submit Booking</button>
+      <button type="submit" class="bg-blue-600 hover:bg-blue-700 text-white py-2 px-4 rounded">
+        Submit Booking
+      </button>
     </form>
   </section>
 
@@ -89,7 +101,13 @@
     &copy; 2025 Hotel Rajeshwar
   </footer>
 
-  <script src="booking.js" defer></script>
+  <!-- AOS Animation JS -->
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>
+    AOS.init();
+  </script>
+
+  <!-- Custom JS -->
+  <script defer src="booking.js"></script>
 </body>
 </html>
-
