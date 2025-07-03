@@ -1,55 +1,40 @@
-nav ul li a {
-  color: #2563eb; /* Light blue */
-  font-weight: normal;
-  transition: none;
+
+/* rooms.css */
+
+/* Navbar Links */
+.nav-links li a {
+  color: #2563eb; /* Light Blue */
+  transition: color 0.3s ease;
 }
 
-/* Remove hover color change */
-nav ul li a:hover,
-nav ul li a.active {
-  color: #2563eb;  /* Keep same light blue on hover too */
-  font-weight: normal;
+.nav-links li a:hover {
+  color: #1e3a8a; /* Darker Blue */
 }
 
-/* ---------- Image Hover Animation ---------- */
-.room-image {
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-  border-radius: 12px;
-  overflow: hidden;
-  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+/* Heading Hover */
+.section-heading:hover,
+h1:hover {
+  color: #1e3a8a; /* Darker blue on hover */
 }
 
-.room-image:hover {
+/* Room Images */
+.room-img {
+  border-radius: 0.5rem;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+  cursor: pointer;
+}
+
+.room-img:hover {
   transform: scale(1.05);
-  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
 }
 
-/* ---------- Responsive Hamburger Menu ---------- */
-@media (max-width: 768px) {
-  .nav-links {
-    flex-direction: column;
-    display: none;
-    background-color: white;
-    position: absolute;
-    right: 1rem;
-    top: 60px;
-    border: 1px solid #ddd;
-    padding: 1rem;
-    z-index: 999;
-  }
-
-  .nav-links.active {
-    display: flex;
-  }
-
-  .hamburger {
-    display: block;
-    font-size: 24px;
-    cursor: pointer;
-    color: #2563eb;
-  }
-}
-
-.hamburger {
+/* Lightbox */
+#lightbox {
   display: none;
 }
+
+#lightbox.active {
+  display: flex;
+}
+
