@@ -1,1 +1,34 @@
 
+/* Navbar (optional override) */
+nav ul li a {
+  color: #2563eb; /* Normal blue */
+  transition: all 0.3s ease;
+}
+
+nav ul li a:hover,
+nav ul li a.active {
+  color: #1d4ed8; /* Dark blue on hover */
+  font-weight: bold;
+}
+
+/* Contact section spacing */
+.contact-section h3 {
+  margin-bottom: 0.3rem;
+  color: #1e3a8a;
+}
+
+.contact-card p {
+  color: #374151;
+}
+
+
+---
+
+✅ contact.js (Navigation Toggle)
+
+// contact.js
+function toggleMenu() {
+  const menu = document.querySelector('.nav-links');
+  menu.classList.toggle('active');
+}
+
