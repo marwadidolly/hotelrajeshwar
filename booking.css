@@ -1,24 +1,49 @@
 
-/* styles/booking.css */
-
-/* Navbar Styles */
-nav ul li a {
-  color: #1e3a8a; /* default blue */
-  transition: all 0.3s ease;
+/* Mobile Nav Toggle */
+.menu-toggle {
+  display: none;
 }
 
-nav ul li a:hover,
-nav ul li a.active {
-  color: #1d4ed8; /* darker blue on hover or active */
-  font-weight: bold;
+@media (max-width: 768px) {
+  .menu-toggle {
+    display: block;
+    cursor: pointer;
+  }
+
+  .nav-links {
+    display: none;
+    flex-direction: column;
+    background: white;
+    position: absolute;
+    top: 70px;
+    right: 0;
+    width: 100%;
+    padding: 1rem;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  }
+
+  .nav-links.active {
+    display: flex;
+  }
+
+  .nav-links li {
+    margin: 10px 0;
+  }
 }
 
-/* Fix Book Now text align on all screens */
-.text-blue-600 {
-  color: #2563eb;
+/* Nav Styling */
+.nav-links a {
+  color: #2563eb; /* light blue */
+  transition: color 0.3s ease;
+}
+.nav-links a:hover {
+  color: #1e40af; /* dark blue */
+}
+.nav-links a.text-blue-600 {
+  font-weight: 600;
 }
 
-/* Form styling */
+/* Booking Form */
 form input,
 form select,
 form textarea {
