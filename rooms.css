@@ -1,54 +1,36 @@
+
+/* rooms.css */
+
+/* Basic card hover */
 .room-card {
-  position: relative;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  border-radius: 12px;
   overflow: hidden;
-  border-radius: 16px;
-  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
-  transition: transform 0.4s ease, box-shadow 0.4s ease;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
 }
 
 .room-card:hover {
-  transform: translateY(-6px) scale(1.02);
-  box-shadow: 0 16px 32px rgba(0, 0, 0, 0.2);
+  transform: translateY(-6px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
 }
 
-.room-card img {
-  transition: transform 0.4s ease;
-}
-
-.room-card:hover img {
-  transform: scale(1.05);
-}
-
-/* Navigation active color */
-nav a {
-  color: #2563eb;
+/* Responsive navbar (optional tweaks if needed) */
+.nav-links a {
   transition: color 0.3s ease;
 }
 
-nav a:hover,
-nav a.active {
-  color: #2563eb;
+/* Navbar active link */
+.nav-links a.text-blue-600 {
   font-weight: 600;
 }
 
-/* Title effect */
-.header-title {
-  color: #2563eb;
+/* Section heading style */
+.section-heading {
+  color: #2563eb; /* blue-600 */
   transition: color 0.3s ease;
 }
 
-.header-title:hover {
-  color: #2563eb;
-}
-
-/* Section heading */
-.section-heading {
-  color: #2563eb;
-  transition: transform 0.3s ease, color 0.3s ease;
-  cursor: pointer;
-}
-
 .section-heading:hover {
-  color: #1e40af;
-  transform: translateY(-3px);
+  color: #1e3a8a; /* dark blue */
 }
+
