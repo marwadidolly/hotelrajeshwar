@@ -1,18 +1,35 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Booking - Hotel Rajeshwar</title>
   <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
   <link rel="stylesheet" href="booking.css">
-  
+</head>
+<body class="bg-gray-100 text-gray-800">
+
+  <!-- Header / Navbar -->
+  <header class="bg-white shadow-md sticky top-0 z-50">
+    <div class="container mx-auto px-4 py-4 flex justify-between items-center relative">
+      <h1 class="text-2xl font-bold text-blue-600 hover:text-blue-800 transition">Hotel Rajeshwar</h1>
+
+      <!-- Hamburger Button (Mobile) -->
+      <div class="menu-toggle md:hidden" onclick="toggleMenu()">
+        <svg class="w-6 h-6 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+            d="M4 6h16M4 12h16M4 18h16" />
+        </svg>
+      </div>
+
+      <!-- Navigation Links -->
       <nav>
-        <ul class="nav-links flex space-x-6 md:flex-row">
-          <li><a href="index.html" class="hover:text-blue-600">Home</a></li>
-          <li><a href="rooms.html" class="hover:text-blue-600">Rooms</a></li>
+        <ul class="nav-links flex space-x-6 md:flex md:space-x-6 md:static">
+          <li><a href="index.html" class="hover:text-blue-700 text-blue-600">Home</a></li>
+          <li><a href="rooms.html" class="hover:text-blue-700 text-blue-600">Rooms</a></li>
           <li><a href="booking.html" class="text-blue-600 font-semibold">Book Now</a></li>
-          <li><a href="contact.html" class="hover:text-blue-600">Contact</a></li>
+          <li><a href="contact.html" class="hover:text-blue-700 text-blue-600">Contact</a></li>
         </ul>
       </nav>
     </div>
@@ -20,7 +37,7 @@
 
   <!-- Booking Section -->
   <section class="py-12 px-4 max-w-xl mx-auto">
-    <h2 class="text-3xl font-bold mb-6 text-center">Online Booking</h2>
+    <h2 class="text-3xl font-bold mb-6 text-center text-blue-600 hover:text-blue-800 transition">Online Booking</h2>
     <form action="mailto:hotelrajeshwar01@gmail.com" method="POST" enctype="text/plain" class="bg-white p-6 rounded-xl shadow space-y-4">
       <div>
         <label for="name" class="block font-medium mb-1">Full Name</label>
@@ -63,7 +80,7 @@
         <textarea id="message" name="message" rows="4" class="w-full p-2 border rounded"></textarea>
       </div>
 
-      <button type="submit" class="bg-blue-600 hover:bg-blue-700 text-white py-2 px-4 rounded">Submit Booking</button>
+      <button type="submit" class="bg-blue-600 hover:bg-blue-700 text-white py-2 px-4 rounded transition">Submit Booking</button>
     </form>
   </section>
 
@@ -72,7 +89,7 @@
     &copy; 2025 Hotel Rajeshwar
   </footer>
 
-  </script>
-  <script defer src="booking.js"></script>
+  <script src="booking.js" defer></script>
 </body>
 </html>
+
