@@ -36,7 +36,7 @@
   transition: color 0.3s ease;
 }
 .nav-links a:hover {
-  color: #1e40af; /* Darker Blue */
+  color: #1e3a8a; /* Darker Blue */
 }
 .nav-links a.text-blue-600 {
   font-weight: 600;
