@@ -1,61 +1,57 @@
-/* Mobile Nav Toggle */
-.menu-toggle {
-  display: none;
+nav ul li a {
+  color: #2563eb; /* normal blue */
+  transition: all 0.3s ease;
 }
 
-@media (max-width: 768px) {
-  .menu-toggle {
-    display: block;
-    cursor: pointer;
-  }
+nav ul li a:hover,
+nav ul li a.active {
+  color: #1d4ed8; /* darker blue on hover */
+  font-weight: 600;
+}
 
+/* ---------- Our Rooms Heading Hover Effect ---------- */
+h2:hover {
+  color: #1d4ed8; /* dark blue on hover */
+  transition: color 0.3s ease;
+}
+
+/* ---------- Image Grid Styling ---------- */
+.grid {
+  gap: 1.5rem;
+}
+
+.room-image {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
+}
+
+.room-image:hover {
+  transform: scale(1.05);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+}
+
+/* ---------- Responsive Fixes ---------- */
+@media (max-width: 768px) {
   .nav-links {
-    display: none;
     flex-direction: column;
-    background: white;
-    position: absolute;
-    top: 70px;
-    right: 0;
-    width: 100%;
-    padding: 1rem;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    display: none;
   }
 
   .nav-links.active {
     display: flex;
   }
 
-  .nav-links li {
-    margin: 10px 0;
+  .hamburger {
+    display: block;
+    cursor: pointer;
   }
 }
 
-/* Nav Styling */
-.nav-links a {
-  color: #2563eb; /* Light Blue */
-  transition: color 0.3s ease;
-}
-.nav-links a:hover {
-  color: #1e3a8a; /* Darker Blue */
-}
-.nav-links a.text-blue-600 {
-  font-weight: 600;
-}
-
-/* Room Image Hover */
-.room-card {
-  overflow: hidden;
-}
-.room-card img {
-  transition: transform 0.4s ease;
-}
-.room-card:hover img {
-  transform: scale(1.05);
-}
-
-/* Heading Styling */
-h2.section-heading {
+.hamburger {
+  display: none;
+  font-size: 24px;
   color: #2563eb;
 }
-
 
