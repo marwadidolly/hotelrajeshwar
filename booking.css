@@ -1,63 +1,30 @@
 
-/* Mobile Nav Toggle */
-.menu-toggle {
-  display: none;
+/* Navbar default color and hover */
+nav ul li a {
+  color: #2563eb; /* normal blue */
+  transition: all 0.3s ease;
 }
 
-@media (max-width: 768px) {
-  .menu-toggle {
-    display: block;
-    cursor: pointer;
-  }
-
-  .nav-links {
-    display: none;
-    flex-direction: column;
-    background: white;
-    position: absolute;
-    top: 70px;
-    right: 0;
-    width: 100%;
-    padding: 1rem;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-  }
-
-  .nav-links.active {
-    display: flex;
-  }
-
-  .nav-links li {
-    margin: 10px 0;
-  }
+nav ul li a:hover {
+  color: #1e3a8a; /* dark blue on hover */
 }
 
-/* Nav Styling */
-.nav-links a {
-  color: #2563eb; /* light blue */
-  transition: color 0.3s ease;
-}
-.nav-links a:hover {
-  color: #1e40af; /* dark blue */
-}
-.nav-links a.text-blue-600 {
-  font-weight: 600;
+/* Highlight Book Now page */
+nav ul li a[href="booking.html"] {
+  font-weight: bold;
 }
 
-/* Booking Form */
-form input,
-form select,
-form textarea {
-  border: 1px solid #cbd5e1;
-  border-radius: 0.375rem;
-  padding: 0.5rem;
-  width: 100%;
+/* Booking heading hover handled via tailwind in HTML */
+
+/* Form fields hover */
+form input:focus,
+form select:focus,
+form textarea:focus {
+  border-color: #2563eb;
+  outline: none;
+  box-shadow: 0 0 0 2px rgba(37, 99, 235, 0.3);
 }
 
 form button {
-  background-color: #2563eb;
   transition: background-color 0.3s ease;
-}
-
-form button:hover {
-  background-color: #1e40af;
 }
