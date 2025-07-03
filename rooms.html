@@ -1,98 +1,89 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Rooms - Hotel Rajeshwar</title>
-  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/glightbox/dist/css/glightbox.min.css" />
-  <link rel="stylesheet" href="rooms.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Booking - Hotel Rajeshwar</title>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet" />
+  <link rel="stylesheet" href="booking.css" />
 </head>
 <body class="bg-gray-100 text-gray-800">
-  
-  <!-- Navbar --> 
-<header class="bg-white shadow-md sticky top-0 z-50">
-  <div class="container mx-auto px-4 py-4 flex justify-between items-center relative">
-    <h1 class="text-2xl font-bold text-blue-600">Hotel Rajeshwar</h1>
-    
-    <!-- Hamburger for mobile -->
-    <div class="menu-toggle md:hidden" onclick="toggleMenu()">
-      <svg class="w-6 h-6 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-          d="M4 6h16M4 12h16M4 18h16" />
-      </svg>
+
+  <!-- Header / Navbar -->
+  <header class="bg-white shadow-md sticky top-0 z-50">
+    <div class="container mx-auto px-4 py-4 flex justify-between items-center relative">
+      <h1 class="text-2xl font-bold text-blue-600">Hotel Rajeshwar</h1>
+
+      <!-- Hamburger -->
+      <div class="menu-toggle md:hidden" onclick="toggleMenu()">
+        <svg class="w-6 h-6 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+            d="M4 6h16M4 12h16M4 18h16" />
+        </svg>
+      </div>
+
+      <!-- Navigation Links -->
+      <nav>
+        <ul class="nav-links flex space-x-6 md:flex md:space-x-6 md:static">
+          <li><a href="index.html" class="hover:text-blue-600">Home</a></li>
+          <li><a href="rooms.html" class="hover:text-blue-600">Rooms</a></li>
+          <li><a href="booking.html" class="text-blue-600 font-medium">Book Now</a></li>
+          <li><a href="contact.html" class="hover:text-blue-600">Contact</a></li>
+        </ul>
+      </nav>
     </div>
+  </header>
 
-    <!-- Navigation -->
-    <nav>
-      <ul class="nav-links flex space-x-6 md:flex md:space-x-6 md:static">
-        <li><a href="index.html">Home</a></li>
-        <li><a href="rooms.html">Rooms</a></li>
-        <li><a href="booking.html">Book Now</a></li>
-        <li><a href="contact.html">Contact</a></li>
-      </ul>
-    </nav>
-  </div>
-</header>
+  <!-- Booking Form Section -->
+  <section class="py-12 px-4 max-w-xl mx-auto">
+    <h2 class="text-3xl font-bold text-blue-600 hover:text-blue-900 mb-6 text-center transition">Online Booking</h2>
 
+    <form action="mailto:hotelrajeshwar01@gmail.com" method="POST" enctype="text/plain"
+      class="bg-white p-6 rounded-xl shadow space-y-4">
+      <div>
+        <label for="name" class="block font-medium mb-1">Full Name</label>
+        <input type="text" id="name" name="name" required class="w-full p-2 border rounded" />
+      </div>
 
-  <!-- Rooms Section -->
-  <section class="py-12 px-4 max-w-7xl mx-auto">
-    <h2 class="text-4xl font-bold mb-8 text-center text-blue-800">Our Rooms</h2>
+      <div>
+        <label for="email" class="block font-medium mb-1">Email</label>
+        <input type="email" id="email" name="email" required class="w-full p-2 border rounded" />
+      </div>
 
-    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-      <!-- Room Cards -->
-      <div class="room-card bg-white">
-        <a href="IMG_3525.JPG" class="glightbox" data-gallery="rooms">
-          <img loading="lazy" src="IMG_3525.JPG" alt="Room 1" class="w-full h-60 object-cover rounded shadow">
-        </a>
+      <div>
+        <label for="phone" class="block font-medium mb-1">Phone Number</label>
+        <input type="tel" id="phone" name="phone" required class="w-full p-2 border rounded" />
       </div>
-      <div class="room-card bg-white">
-        <a href="IMG_3528.JPG" class="glightbox" data-gallery="rooms">
-          <img loading="lazy" src="IMG_3528.JPG" alt="Room 2" class="w-full h-60 object-cover rounded shadow">
-        </a>
+
+      <div>
+        <label for="room" class="block font-medium mb-1">Room Type</label>
+        <select id="room" name="room" required class="w-full p-2 border rounded">
+          <option value="Standard Non-AC">Standard Room (Non-AC)</option>
+          <option value="Standard AC">Standard Room (AC)</option>
+          <option value="Deluxe AC">Deluxe Room (AC)</option>
+          <option value="Dormitory">Dormitory</option>
+        </select>
       </div>
-      <div class="room-card bg-white">
-        <a href="IMG_3529.JPG" class="glightbox" data-gallery="rooms">
-          <img loading="lazy" src="IMG_3529.JPG" alt="Room 3" class="w-full h-60 object-cover rounded shadow">
-        </a>
+
+      <div>
+        <label for="checkin" class="block font-medium mb-1">Check-in Date</label>
+        <input type="date" id="checkin" name="checkin" required class="w-full p-2 border rounded" />
       </div>
-      <div class="room-card bg-white">
-        <a href="IMG_3530.JPG" class="glightbox" data-gallery="rooms">
-          <img loading="lazy" src="IMG_3530.JPG" alt="Room 4" class="w-full h-60 object-cover rounded shadow">
-        </a>
+
+      <div>
+        <label for="checkout" class="block font-medium mb-1">Check-out Date</label>
+        <input type="date" id="checkout" name="checkout" required class="w-full p-2 border rounded" />
       </div>
-      <div class="room-card bg-white">
-        <a href="IMG_3531.JPG" class="glightbox" data-gallery="rooms">
-          <img loading="lazy" src="IMG_3531.JPG" alt="Room 5" class="w-full h-60 object-cover rounded shadow">
-        </a>
+
+      <div>
+        <label for="message" class="block font-medium mb-1">Special Requests</label>
+        <p class="text-sm text-gray-600 mb-1">(e.g. AC+Non-AC, extra person, multiple rooms)</p>
+        <textarea id="message" name="message" rows="4" class="w-full p-2 border rounded"></textarea>
       </div>
-      <div class="room-card bg-white">
-        <a href="IMG_3536.JPG" class="glightbox" data-gallery="rooms">
-          <img loading="lazy" src="IMG_3536.JPG" alt="Room 6" class="w-full h-60 object-cover rounded shadow">
-        </a>
-      </div>
-      <div class="room-card bg-white">
-        <a href="IMG_3533.JPG" class="glightbox" data-gallery="rooms">
-          <img loading="lazy" src="IMG_3533.JPG" alt="Room 7" class="w-full h-60 object-cover rounded shadow">
-        </a>
-      </div>
-      <div class="room-card bg-white">
-        <a href="IMG_3534 (3).JPG" class="glightbox" data-gallery="rooms">
-          <img loading="lazy" src="IMG_3534 (3).JPG" alt="Room 8" class="w-full h-60 object-cover rounded shadow">
-        </a>
-      </div>
-      <div class="room-card bg-white">
-        <a href="IMG_3535.JPG" class="glightbox" data-gallery="rooms">
-          <img loading="lazy" src="IMG_3535.JPG" alt="Room 9" class="w-full h-60 object-cover rounded shadow">
-        </a>
-      </div>
-      <div class="room-card bg-white">
-        <a href="IMG_3532.JPG" class="glightbox" data-gallery="rooms">
-          <img loading="lazy" src="IMG_3532.JPG" alt="Room 10" class="w-full h-60 object-cover rounded shadow">
-        </a>
-      </div>
-    </div>
+
+      <button type="submit" class="bg-blue-600 hover:bg-blue-700 text-white py-2 px-4 rounded">Submit Booking</button>
+    </form>
   </section>
 
   <!-- Footer -->
@@ -100,6 +91,8 @@
     &copy; 2025 Hotel Rajeshwar
   </footer>
 
-  <script src="rooms.js"></script>
+  <!-- JS -->
+  <script src="booking.js" defer></script>
 </body>
 </html>
+
