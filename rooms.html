@@ -3,29 +3,52 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Rooms - Hotel Rajeshwar</title>
 
   <!-- Tailwind CSS -->
   <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
 
   <!-- AOS Animation CSS -->
-  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+  <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet" />
 
-  <link rel="stylesheet" href="rooms.css" />
+  <!-- Lightbox2 CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/lightbox2@2.11.4/dist/css/lightbox.min.css" rel="stylesheet"/>
+
+  <style>
+    .section-heading {
+      color: #2563eb; /* normal blue */
+      transition: color 0.3s ease;
+    }
+
+    .section-heading:hover {
+      color: #1d4ed8; /* dark blue on hover */
+    }
+
+    /* Navbar styles (optional if not external CSS) */
+    nav ul li a {
+      color: #2563eb;
+      transition: all 0.3s ease;
+    }
+
+    nav ul li a:hover {
+      color: #1d4ed8;
+      font-weight: bold;
+    }
+  </style>
 </head>
 <body class="bg-gray-50">
 
   <!-- Navbar -->
   <header class="bg-white shadow sticky top-0 z-50">
     <div class="container mx-auto flex justify-between items-center py-4 px-6">
-      <h1 class="text-xl font-bold text-blue-600 hover:text-blue-800 transition duration-300">Hotel Rajeshwar</h1>
+      <h1 class="text-xl font-bold text-blue-600">Hotel Rajeshwar</h1>
       <nav>
-        <ul class="nav-links flex space-x-6">
-          <li><a href="index.html" class="text-blue-600 hover:text-blue-800">Home</a></li>
-          <li><a href="rooms.html" class="text-blue-600 font-semibold hover:text-blue-800">Rooms</a></li>
-          <li><a href="booking.html" class="text-blue-600 hover:text-blue-800">Book Now</a></li>
-          <li><a href="contact.html" class="text-blue-600 hover:text-blue-800">Contact</a></li>
+        <ul class="flex space-x-6">
+          <li><a href="index.html" class="hover:text-blue-700 text-blue-600">Home</a></li>
+          <li><a href="rooms.html" class="hover:text-blue-700 text-blue-600 font-semibold">Rooms</a></li>
+          <li><a href="booking.html" class="hover:text-blue-700 text-blue-600">Book Now</a></li>
+          <li><a href="contact.html" class="hover:text-blue-700 text-blue-600">Contact</a></li>
         </ul>
       </nav>
     </div>
@@ -33,18 +56,69 @@
 
   <!-- Room Section -->
   <section class="py-12 px-4 max-w-6xl mx-auto">
-    <h2 class="text-4xl font-bold mb-8 text-center text-blue-600" data-aos="fade-up">Our Rooms</h2>
+    <h2 class="section-heading text-4xl font-bold mb-8 text-center">Our Rooms</h2>
+
     <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
-      <img src="IMG_3525.JPG" alt="Room 1" class="rounded-lg shadow hover:scale-105 transform transition duration-300" data-aos="zoom-in">
-      <img src="IMG_3528.JPG" alt="Room 2" class="rounded-lg shadow hover:scale-105 transform transition duration-300" data-aos="fade-up">
-      <img src="IMG_3529.JPG" alt="Room 3" class="rounded-lg shadow hover:scale-105 transform transition duration-300" data-aos="zoom-in">
-      <img src="IMG_3530.JPG" alt="Room 4" class="rounded-lg shadow hover:scale-105 transform transition duration-300" data-aos="fade-up">
-      <img src="IMG_3531.JPG" alt="Room 5" class="rounded-lg shadow hover:scale-105 transform transition duration-300" data-aos="zoom-in">
-      <img src="IMG_3536.JPG" alt="Room 6" class="rounded-lg shadow hover:scale-105 transform transition duration-300" data-aos="fade-up">
-      <img src="IMG_3533.JPG" alt="Room 7" class="rounded-lg shadow hover:scale-105 transform transition duration-300" data-aos="zoom-in">
-      <img src="IMG_3534 (3).JPG" alt="Room 8" class="rounded-lg shadow hover:scale-105 transform transition duration-300" data-aos="fade-up">
-      <img src="IMG_3535.JPG" alt="Room 9" class="rounded-lg shadow hover:scale-105 transform transition duration-300" data-aos="zoom-in">
-      <img src="IMG_3532.JPG" alt="Room 10" class="rounded-lg shadow hover:scale-105 transform transition duration-300" data-aos="fade-up">
+      <!-- Repeat for each room image -->
+      <a href="IMG_3525.JPG" data-lightbox="rooms" data-title="Room 1">
+        <img src="IMG_3525.JPG" alt="Room 1"
+             class="rounded-lg shadow hover:scale-105 transform transition duration-300"
+             data-aos="zoom-in"/>
+      </a>
+
+      <a href="IMG_3528.JPG" data-lightbox="rooms" data-title="Room 2">
+        <img src="IMG_3528.JPG" alt="Room 2"
+             class="rounded-lg shadow hover:scale-105 transform transition duration-300"
+             data-aos="zoom-in"/>
+      </a>
+
+      <a href="IMG_3529.JPG" data-lightbox="rooms" data-title="Room 3">
+        <img src="IMG_3529.JPG" alt="Room 3"
+             class="rounded-lg shadow hover:scale-105 transform transition duration-300"
+             data-aos="zoom-in"/>
+      </a>
+
+      <a href="IMG_3530.JPG" data-lightbox="rooms" data-title="Room 4">
+        <img src="IMG_3530.JPG" alt="Room 4"
+             class="rounded-lg shadow hover:scale-105 transform transition duration-300"
+             data-aos="zoom-in"/>
+      </a>
+
+      <a href="IMG_3531.JPG" data-lightbox="rooms" data-title="Room 5">
+        <img src="IMG_3531.JPG" alt="Room 5"
+             class="rounded-lg shadow hover:scale-105 transform transition duration-300"
+             data-aos="zoom-in"/>
+      </a>
+
+      <a href="IMG_3536.JPG" data-lightbox="rooms" data-title="Room 6">
+        <img src="IMG_3536.JPG" alt="Room 6"
+             class="rounded-lg shadow hover:scale-105 transform transition duration-300"
+             data-aos="zoom-in"/>
+      </a>
+
+      <a href="IMG_3533.JPG" data-lightbox="rooms" data-title="Room 7">
+        <img src="IMG_3533.JPG" alt="Room 7"
+             class="rounded-lg shadow hover:scale-105 transform transition duration-300"
+             data-aos="zoom-in"/>
+      </a>
+
+      <a href="IMG_3534 (3).JPG" data-lightbox="rooms" data-title="Room 8">
+        <img src="IMG_3534 (3).JPG" alt="Room 8"
+             class="rounded-lg shadow hover:scale-105 transform transition duration-300"
+             data-aos="zoom-in"/>
+      </a>
+
+      <a href="IMG_3535.JPG" data-lightbox="rooms" data-title="Room 9">
+        <img src="IMG_3535.JPG" alt="Room 9"
+             class="rounded-lg shadow hover:scale-105 transform transition duration-300"
+             data-aos="zoom-in"/>
+      </a>
+
+      <a href="IMG_3532.JPG" data-lightbox="rooms" data-title="Room 10">
+        <img src="IMG_3532.JPG" alt="Room 10"
+             class="rounded-lg shadow hover:scale-105 transform transition duration-300"
+             data-aos="zoom-in"/>
+      </a>
     </div>
   </section>
 
@@ -53,12 +127,13 @@
     &copy; 2025 Hotel Rajeshwar
   </footer>
 
-  <!-- AOS JS -->
-  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <!-- Scripts -->
+  <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
   <script>
     AOS.init();
   </script>
 
-  <script src="rooms.js" defer></script>
+  <script src="https://cdn.jsdelivr.net/npm/lightbox2@2.11.4/dist/js/lightbox.min.js"></script>
 </body>
 </html>
+
