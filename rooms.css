@@ -1,42 +1,54 @@
-
-/* Body Styling */
 body {
-  font-family: 'Segoe UI', sans-serif;
+  font-family: sans-serif;
   background-color: #f3f4f6;
   color: #1f2937;
-  margin: 0;
-  padding: 0;
 }
 
-/* Header Title */
-.header-title {
-  color: #2563eb;
+/* Navbar Styles */
+.nav-links a {
+  color: #2563eb; /* light blue default */
+  transition: color 0.3s ease;
 }
 
-/* Navigation Bar Styling */
-nav ul li a {
-  color: #1f2937;
-  transition: color 0.3s;
+.nav-links a:hover {
+  color: #1e40af; /* dark blue on hover */
 }
 
-nav ul li a:hover {
-  color: #2563eb;
-}
-
-nav ul li a.active {
-  color: #2563eb;
+.nav-links a.active {
+  color: #2563eb; /* Keep same blue for active */
   font-weight: 600;
 }
 
-/* Responsive Menu Fix */
-.menu-toggle {
-  display: none;
-  cursor: pointer;
+/* Heading for Our Rooms */
+.section-heading {
+  color: #2563eb; /* Normal blue */
 }
 
+/* Room Cards */
+.room-card {
+  border-radius: 0.5rem;
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.room-card img {
+  transition: transform 0.3s ease;
+}
+
+.room-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1);
+}
+
+.room-card:hover img {
+  transform: scale(1.05);
+}
+
+/* Mobile Nav Toggle */
 @media (max-width: 768px) {
   .menu-toggle {
     display: block;
+    cursor: pointer;
   }
 
   .nav-links {
@@ -58,22 +70,4 @@ nav ul li a.active {
   .nav-links li {
     margin: 10px 0;
   }
-}
-
-/* Section Headings */
-.section-heading {
-  color: #2563eb;
-}
-
-/* Room Card Hover Animation */
-.room-card {
-  border-radius: 12px;
-  overflow: hidden;
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
-  transition: transform 0.3s, box-shadow 0.3s;
-}
-
-.room-card:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.15);
 }
