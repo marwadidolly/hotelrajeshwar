@@ -5,20 +5,62 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Booking - Hotel Rajeshwar</title>
   <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
-  <link rel="stylesheet"href="booking.css">
+  <link rel="stylesheet" href="booking.css">
+  <style>
+    .hamburger {
+      display: none;
+      flex-direction: column;
+      cursor: pointer;
+    }
+
+    .hamburger span {
+      height: 3px;
+      width: 25px;
+      background: #1e3a8a;
+      margin: 4px 0;
+      border-radius: 5px;
+      transition: 0.3s;
+    }
+
+    @media (max-width: 768px) {
+      .nav-links {
+        display: none;
+        flex-direction: column;
+        background: white;
+        position: absolute;
+        top: 100%;
+        right: 0;
+        width: 100%;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      }
+
+      .nav-links.active {
+        display: flex;
+      }
+
+      .hamburger {
+        display: flex;
+      }
+    }
+  </style>
 </head>
 <body class="bg-gray-100 text-gray-800">
 
   <!-- Header -->
   <header class="bg-white shadow-md sticky top-0 z-50">
-    <div class="container mx-auto px-4 py-4 flex justify-between items-center">
-      <h1 class="text-2xl font-bold">Hotel Rajeshwar</h1>
+    <div class="container mx-auto px-4 py-4 flex justify-between items-center relative">
+      <h1 class="text-2xl font-bold text-blue-600">Hotel Rajeshwar</h1>
+      <div class="hamburger" onclick="toggleMenu()">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
       <nav>
-        <ul class="flex space-x-6">
-          <li><a href="index.html">Home</a></li>
-          <li><a href="rooms.html">Rooms</a></li>
+        <ul class="nav-links flex space-x-6 md:flex-row">
+          <li><a href="index.html" class="hover:text-blue-600">Home</a></li>
+          <li><a href="rooms.html" class="hover:text-blue-600">Rooms</a></li>
           <li><a href="booking.html" class="text-blue-600 font-semibold">Book Now</a></li>
-          <li><a href="contact.html">Contact</a></li>
+          <li><a href="contact.html" class="hover:text-blue-600">Contact</a></li>
         </ul>
       </nav>
     </div>
@@ -27,9 +69,7 @@
   <!-- Booking Section -->
   <section class="py-12 px-4 max-w-xl mx-auto">
     <h2 class="text-3xl font-bold mb-6 text-center">Online Booking</h2>
-    <form action="hotelrajeshwar01@email.com" method="POST" enctype="text/plain" class="bg-white p-6 rounded-xl shadow space-y-4">
-      <!-- 📨 Email address replace karein "yourhotel@email.com" se -->
-
+    <form action="mailto:hotelrajeshwar01@gmail.com" method="POST" enctype="text/plain" class="bg-white p-6 rounded-xl shadow space-y-4">
       <div>
         <label for="name" class="block font-medium mb-1">Full Name</label>
         <input type="text" id="name" name="name" required class="w-full p-2 border rounded" />
@@ -67,7 +107,7 @@
 
       <div>
         <label for="message" class="block font-medium mb-1">Special Requests (Optional)</label>
-        NOTE:- IF you need more than one room or have any special preferences (Like AC + Non-AC, extra bed, late check-in)please mention them here.
+        <p class="text-sm text-gray-600 mb-1">If you need more than one room or special preferences (AC + Non-AC, extra bed, etc), mention them here.</p>
         <textarea id="message" name="message" rows="4" class="w-full p-2 border rounded"></textarea>
       </div>
 
@@ -80,6 +120,11 @@
     &copy; 2025 Hotel Rajeshwar
   </footer>
 
+  <script>
+    function toggleMenu() {
+      document.querySelector('.nav-links').classList.toggle('active');
+    }
+  </script>
+  <script defer src="booking.js"></script>
 </body>
-<script defer src="booking.js"></script>
 </html>
