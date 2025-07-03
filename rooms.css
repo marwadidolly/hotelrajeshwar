@@ -1,1 +1,61 @@
+/* Mobile Nav Toggle */
+.menu-toggle {
+  display: none;
+}
+
+@media (max-width: 768px) {
+  .menu-toggle {
+    display: block;
+    cursor: pointer;
+  }
+
+  .nav-links {
+    display: none;
+    flex-direction: column;
+    background: white;
+    position: absolute;
+    top: 70px;
+    right: 0;
+    width: 100%;
+    padding: 1rem;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  }
+
+  .nav-links.active {
+    display: flex;
+  }
+
+  .nav-links li {
+    margin: 10px 0;
+  }
+}
+
+/* Nav Styling */
+.nav-links a {
+  color: #2563eb; /* Light Blue */
+  transition: color 0.3s ease;
+}
+.nav-links a:hover {
+  color: #1e40af; /* Darker Blue */
+}
+.nav-links a.text-blue-600 {
+  font-weight: 600;
+}
+
+/* Room Image Hover */
+.room-card {
+  overflow: hidden;
+}
+.room-card img {
+  transition: transform 0.4s ease;
+}
+.room-card:hover img {
+  transform: scale(1.05);
+}
+
+/* Heading Styling */
+h2.section-heading {
+  color: #2563eb;
+}
+
 
