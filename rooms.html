@@ -3,18 +3,18 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Rooms - Hotel Rajeshwar</title>
   <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet" />
-  <link rel="stylesheet" href="rooms.css" />
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/glightbox/dist/css/glightbox.min.css" />
+  <link rel="stylesheet" href="rooms.css" />
 </head>
 <body class="bg-gray-100 text-gray-800">
 
-  <!-- Header / Navbar -->
+  <!-- Header -->
   <header class="bg-white shadow-md sticky top-0 z-50">
-    <div class="container mx-auto px-4 py-4 flex justify-between items-center relative">
-      <h1 class="text-2xl font-bold text-blue-600">Hotel Rajeshwar</h1>
+    <div class="max-w-6xl mx-auto px-4 py-4 flex justify-between items-center relative">
+      <h1 class="text-2xl font-bold text-blue-600 hover:text-blue-800 transition-colors duration-300 cursor-pointer">Hotel Rajeshwar</h1>
 
       <!-- Hamburger -->
       <div class="menu-toggle md:hidden" onclick="toggleMenu()">
@@ -24,11 +24,11 @@
         </svg>
       </div>
 
-      <!-- Navigation -->
+      <!-- Nav Links -->
       <nav>
         <ul class="nav-links flex space-x-6 md:flex md:space-x-6 md:static">
           <li><a href="index.html" class="hover:text-blue-600">Home</a></li>
-          <li><a href="rooms.html" class="text-blue-600 font-medium">Rooms</a></li>
+          <li><a href="rooms.html" class="text-blue-600 font-semibold">Rooms</a></li>
           <li><a href="booking.html" class="hover:text-blue-600">Book Now</a></li>
           <li><a href="contact.html" class="hover:text-blue-600">Contact</a></li>
         </ul>
@@ -36,28 +36,67 @@
     </div>
   </header>
 
-  <!-- Room Section -->
+  <!-- Rooms Section -->
   <section class="py-12 px-4 max-w-7xl mx-auto">
-    <h2 class="text-4xl font-bold text-blue-600 hover:text-blue-900 mb-8 text-center transition">Our Rooms</h2>
+    <h2 class="text-3xl font-bold text-blue-600 mb-8 text-center">Our Rooms</h2>
 
-    <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8">
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
       <!-- Room Cards -->
-      <div class="room-card bg-white rounded-lg shadow hover:shadow-lg transition transform hover:-translate-y-1">
+      <div class="room-card bg-white">
         <a href="IMG_3525.JPG" class="glightbox" data-gallery="rooms">
-          <img src="IMG_3525.JPG" alt="Room 1" class="w-full h-60 object-cover rounded-t-lg">
+          <img src="IMG_3525.JPG" alt="Room 1" class="w-full h-60 object-cover" />
         </a>
       </div>
-      <div class="room-card bg-white rounded-lg shadow hover:shadow-lg transition transform hover:-translate-y-1">
+      <div class="room-card bg-white">
         <a href="IMG_3528.JPG" class="glightbox" data-gallery="rooms">
-          <img src="IMG_3528.JPG" alt="Room 2" class="w-full h-60 object-cover rounded-t-lg">
+          <img src="IMG_3528.JPG" alt="Room 2" class="w-full h-60 object-cover" />
         </a>
       </div>
-      <div class="room-card bg-white rounded-lg shadow hover:shadow-lg transition transform hover:-translate-y-1">
+      <div class="room-card bg-white">
         <a href="IMG_3529.JPG" class="glightbox" data-gallery="rooms">
-          <img src="IMG_3529.JPG" alt="Room 3" class="w-full h-60 object-cover rounded-t-lg">
+          <img src="IMG_3529.JPG" alt="Room 3" class="w-full h-60 object-cover" />
         </a>
       </div>
-      <!-- Add rest of the rooms similarly -->
+      <div class="room-card bg-white">
+        <a href="IMG_3530.JPG" class="glightbox" data-gallery="rooms">
+          <img src="IMG_3530.JPG" alt="Room 4" class="w-full h-60 object-cover" />
+        </a>
+      </div>
+      <div class="room-card bg-white">
+        <a href="IMG_3531.JPG" class="glightbox" data-gallery="rooms">
+          <img src="IMG_3531.JPG" alt="Room 5" class="w-full h-60 object-cover" />
+        </a>
+      </div>
+      <div class="room-card bg-white">
+        <a href="IMG_3536.JPG" class="glightbox" data-gallery="rooms">
+          <img src="IMG_3536.JPG" alt="Room 6" class="w-full h-60 object-cover" />
+        </a>
+      </div>
+      <div class="room-card bg-white">
+        <a href="IMG_3533.JPG" class="glightbox" data-gallery="rooms">
+          <img src="IMG_3533.JPG" alt="Room 7" class="w-full h-60 object-cover" />
+        </a>
+      </div>
+      <div class="room-card bg-white">
+        <a href="IMG_3534 (3).JPG" class="glightbox" data-gallery="rooms">
+          <img src="IMG_3534 (3).JPG" alt="Room 8" class="w-full h-60 object-cover" />
+        </a>
+      </div>
+      <div class="room-card bg-white">
+        <a href="IMG_3535.JPG" class="glightbox" data-gallery="rooms">
+          <img src="IMG_3535.JPG" alt="Room 9" class="w-full h-60 object-cover" />
+        </a>
+      </div>
+      <div class="room-card bg-white">
+        <a href="IMG_3532.JPG" class="glightbox" data-gallery="rooms">
+          <img src="IMG_3532.JPG" alt="Room 10" class="w-full h-60 object-cover" />
+        </a>
+      </div>
+      <div class="room-card bg-white">
+        <a href="IMG_3537.JPG" class="glightbox" data-gallery="rooms">
+          <img src="IMG_3537.JPG" alt="Room 11" class="w-full h-60 object-cover" />
+        </a>
+      </div>
     </div>
   </section>
 
@@ -66,10 +105,9 @@
     &copy; 2025 Hotel Rajeshwar
   </footer>
 
-  <!-- Scripts -->
+  <!-- JS -->
   <script src="https://cdn.jsdelivr.net/npm/glightbox/dist/js/glightbox.min.js"></script>
   <script src="rooms.js" defer></script>
 </body>
 </html>
-
 
