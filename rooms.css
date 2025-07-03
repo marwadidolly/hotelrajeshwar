@@ -1,42 +1,41 @@
 nav ul li a {
-  color: #2563eb; /* normal blue */
-  transition: all 0.3s ease;
+  color: #2563eb; /* Light blue */
+  font-weight: normal;
+  transition: none;
 }
 
+/* Remove hover color change */
 nav ul li a:hover,
 nav ul li a.active {
-  color: #1d4ed8; /* darker blue on hover */
-  font-weight: 600;
+  color: #2563eb;  /* Keep same light blue on hover too */
+  font-weight: normal;
 }
 
-/* ---------- Our Rooms Heading Hover Effect ---------- */
-h2:hover {
-  color: #1d4ed8; /* dark blue on hover */
-  transition: color 0.3s ease;
-}
-
-/* ---------- Image Grid Styling ---------- */
-.grid {
-  gap: 1.5rem;
-}
-
+/* ---------- Image Hover Animation ---------- */
 .room-image {
   transition: transform 0.3s ease, box-shadow 0.3s ease;
   border-radius: 12px;
   overflow: hidden;
-  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
 }
 
 .room-image:hover {
   transform: scale(1.05);
-  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
 }
 
-/* ---------- Responsive Fixes ---------- */
+/* ---------- Responsive Hamburger Menu ---------- */
 @media (max-width: 768px) {
   .nav-links {
     flex-direction: column;
     display: none;
+    background-color: white;
+    position: absolute;
+    right: 1rem;
+    top: 60px;
+    border: 1px solid #ddd;
+    padding: 1rem;
+    z-index: 999;
   }
 
   .nav-links.active {
@@ -45,13 +44,12 @@ h2:hover {
 
   .hamburger {
     display: block;
+    font-size: 24px;
     cursor: pointer;
+    color: #2563eb;
   }
 }
 
 .hamburger {
   display: none;
-  font-size: 24px;
-  color: #2563eb;
 }
-
