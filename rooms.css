@@ -1,36 +1,79 @@
 
-/* rooms.css */
-
-/* Basic card hover */
-.room-card {
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-  border-radius: 12px;
-  overflow: hidden;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+/* Body Styling */
+body {
+  font-family: 'Segoe UI', sans-serif;
+  background-color: #f3f4f6;
+  color: #1f2937;
+  margin: 0;
+  padding: 0;
 }
 
-.room-card:hover {
-  transform: translateY(-6px);
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+/* Header Title */
+.header-title {
+  color: #2563eb;
 }
 
-/* Responsive navbar (optional tweaks if needed) */
-.nav-links a {
-  transition: color 0.3s ease;
+/* Navigation Bar Styling */
+nav ul li a {
+  color: #1f2937;
+  transition: color 0.3s;
 }
 
-/* Navbar active link */
-.nav-links a.text-blue-600 {
+nav ul li a:hover {
+  color: #2563eb;
+}
+
+nav ul li a.active {
+  color: #2563eb;
   font-weight: 600;
 }
 
-/* Section heading style */
+/* Responsive Menu Fix */
+.menu-toggle {
+  display: none;
+  cursor: pointer;
+}
+
+@media (max-width: 768px) {
+  .menu-toggle {
+    display: block;
+  }
+
+  .nav-links {
+    display: none;
+    flex-direction: column;
+    background: white;
+    position: absolute;
+    top: 70px;
+    right: 0;
+    width: 100%;
+    padding: 1rem 2rem;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  }
+
+  .nav-links.active {
+    display: flex;
+  }
+
+  .nav-links li {
+    margin: 10px 0;
+  }
+}
+
+/* Section Headings */
 .section-heading {
-  color: #2563eb; /* blue-600 */
-  transition: color 0.3s ease;
+  color: #2563eb;
 }
 
-.section-heading:hover {
-  color: #1e3a8a; /* dark blue */
+/* Room Card Hover Animation */
+.room-card {
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s, box-shadow 0.3s;
 }
 
+.room-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.15);
+}
