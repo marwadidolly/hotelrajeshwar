@@ -1,18 +1,48 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Rooms - Hotel Rajeshwar</title>
   <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
-  <link rel="stylesheet" href="rooms.css">
+  <link rel="stylesheet" href="rooms.css" />
+  <style>
+    /* Zoom hover effect on image */
+    .zoom-hover {
+      transition: transform 0.4s ease;
+    }
+    .zoom-hover:hover {
+      transform: scale(1.05);
+    }
+
+    /* Heading hover effect */
+    .section-heading {
+      color: #2563eb; /* light blue */
+      transition: color 0.3s ease;
+      cursor: pointer;
+    }
+
+    .section-heading:hover {
+      color: #1e40af; /* dark blue */
+    }
+
+    /* Hotel Rajeshwar hover effect */
+    .site-title {
+      color: #2563eb;
+      transition: color 0.3s ease;
+    }
+    .site-title:hover {
+      color: #1e40af;
+    }
+  </style>
 </head>
 <body class="bg-gray-50">
 
   <!-- Navbar -->
   <header class="bg-white shadow sticky top-0 z-50">
     <div class="container mx-auto flex justify-between items-center py-4 px-6">
-      <h1 class="text-xl font-bold text-blue-600">Hotel Rajeshwar</h1>
+      <h1 class="text-xl font-bold site-title">Hotel Rajeshwar</h1>
       <nav>
         <ul class="nav-links flex space-x-6">
           <li><a href="index.html" class="hover:text-blue-700 text-blue-600">Home</a></li>
@@ -28,16 +58,17 @@
   <section class="py-12 px-4 max-w-6xl mx-auto">
     <h2 class="section-heading text-4xl font-bold mb-8 text-center">Our Rooms</h2>
     <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
-      <img src="IMG_3525.JPG" alt="Room 1" class="rounded-lg shadow hover:scale-105 transform transition duration-300">
-      <img src="IMG_3528.JPG" alt="Room 2" class="rounded-lg shadow hover:scale-105 transform transition duration-300">
-      <img src="IMG_3529.JPG" alt="Room 3" class="rounded-lg shadow hover:scale-105 transform transition duration-300">
-      <img src="IMG_3530.JPG" alt="Room 4" class="rounded-lg shadow hover:scale-105 transform transition duration-300">
-      <img src="IMG_3531.JPG" alt="Room 5" class="rounded-lg shadow hover:scale-105 transform transition duration-300">
-      <img src="IMG_3536.JPG" alt="Room 6" class="rounded-lg shadow hover:scale-105 transform transition duration-300">
-      <img src="IMG_3533.JPG" alt="Room 7" class="rounded-lg shadow hover:scale-105 transform transition duration-300">
-      <img src="IMG_3534 (3).JPG" alt="Room 8" class="rounded-lg shadow hover:scale-105 transform transition duration-300">
-      <img src="IMG_3535.JPG" alt="Room 9" class="rounded-lg shadow hover:scale-105 transform transition duration-300">
-      <img src="IMG_3532.JPG" alt="Room 10" class="rounded-lg shadow hover:scale-105 transform transition duration-300">
+      <!-- 10 Room Images -->
+      <img src="IMG_3525.JPG" alt="Room 1" class="rounded-lg shadow zoom-hover w-full h-60 object-cover">
+      <img src="IMG_3528.JPG" alt="Room 2" class="rounded-lg shadow zoom-hover w-full h-60 object-cover">
+      <img src="IMG_3529.JPG" alt="Room 3" class="rounded-lg shadow zoom-hover w-full h-60 object-cover">
+      <img src="IMG_3530.JPG" alt="Room 4" class="rounded-lg shadow zoom-hover w-full h-60 object-cover">
+      <img src="IMG_3531.JPG" alt="Room 5" class="rounded-lg shadow zoom-hover w-full h-60 object-cover">
+      <img src="IMG_3536.JPG" alt="Room 6" class="rounded-lg shadow zoom-hover w-full h-60 object-cover">
+      <img src="IMG_3533.JPG" alt="Room 7" class="rounded-lg shadow zoom-hover w-full h-60 object-cover">
+      <img src="IMG_3534 (3).JPG" alt="Room 8" class="rounded-lg shadow zoom-hover w-full h-60 object-cover">
+      <img src="IMG_3535.JPG" alt="Room 9" class="rounded-lg shadow zoom-hover w-full h-60 object-cover">
+      <img src="IMG_3532.JPG" alt="Room 10" class="rounded-lg shadow zoom-hover w-full h-60 object-cover">
     </div>
   </section>
 
@@ -49,4 +80,3 @@
   <script src="rooms.js" defer></script>
 </body>
 </html>
-
