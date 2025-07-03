@@ -22,13 +22,5 @@ nav ul li a.active {
 }
 
 
----
 
-✅ contact.js (Navigation Toggle)
-
-// contact.js
-function toggleMenu() {
-  const menu = document.querySelector('.nav-links');
-  menu.classList.toggle('active');
-}
 
