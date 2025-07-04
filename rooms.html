@@ -17,15 +17,14 @@
 
   <style>
     .section-heading {
-      color: #2563eb; /* normal blue */
+      color: #2563eb;
       transition: color 0.3s ease;
     }
 
     .section-heading:hover {
-      color: #1d4ed8; /* dark blue on hover */
+      color: #1d4ed8;
     }
 
-    /* Navbar styles (optional if not external CSS) */
     nav ul li a {
       color: #2563eb;
       transition: all 0.3s ease;
@@ -35,16 +34,58 @@
       color: #1d4ed8;
       font-weight: bold;
     }
+
+    /* Mobile nav styles */
+    .menu-toggle {
+      display: none;
+    }
+
+    @media (max-width: 768px) {
+      .menu-toggle {
+        display: block;
+        cursor: pointer;
+      }
+
+      .nav-links {
+        display: none;
+        flex-direction: column;
+        background: white;
+        position: absolute;
+        top: 70px;
+        right: 0;
+        width: 100%;
+        padding: 1rem 2rem;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+      }
+
+      .nav-links.active {
+        display: flex;
+      }
+
+      .nav-links li {
+        margin: 10px 0;
+      }
+    }
   </style>
 </head>
 <body class="bg-gray-50">
 
   <!-- Navbar -->
   <header class="bg-white shadow sticky top-0 z-50">
-    <div class="container mx-auto flex justify-between items-center py-4 px-6">
+    <div class="container mx-auto flex justify-between items-center py-4 px-6 relative">
       <h1 class="text-xl font-bold text-blue-600">Hotel Rajeshwar</h1>
+
+      <!-- Hamburger Icon (Mobile) -->
+      <div class="menu-toggle md:hidden" onclick="toggleMenu()">
+        <svg class="w-6 h-6 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+            d="M4 6h16M4 12h16M4 18h16" />
+        </svg>
+      </div>
+
+      <!-- Navigation -->
       <nav>
-        <ul class="flex space-x-6">
+        <ul class="nav-links flex space-x-6 md:flex md:space-x-6 md:static">
           <li><a href="index.html" class="hover:text-blue-700 text-blue-600">Home</a></li>
           <li><a href="rooms.html" class="hover:text-blue-700 text-blue-600 font-semibold">Rooms</a></li>
           <li><a href="booking.html" class="hover:text-blue-700 text-blue-600">Book Now</a></li>
@@ -134,6 +175,13 @@
   </script>
 
   <script src="https://cdn.jsdelivr.net/npm/lightbox2@2.11.4/dist/js/lightbox.min.js"></script>
+
+  <!-- JS to toggle hamburger menu -->
+  <script>
+    function toggleMenu() {
+      const menu = document.querySelector('.nav-links');
+      menu.classList.toggle('active');
+    }
+  </script>
 </body>
 </html>
-
