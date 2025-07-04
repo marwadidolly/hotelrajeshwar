@@ -5,29 +5,78 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Booking - Hotel Rajeshwar</title>
-  
-  <!-- Tailwind CSS CDN -->
-  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
-  
-  <!-- AOS Animation CSS -->
-  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-  
-  <!-- Custom CSS -->
-  <link rel="stylesheet" href="booking.css">
-</head>
 
+  <!-- Tailwind CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet" />
+
+  <link rel="stylesheet" href="booking.css" />
+
+  <style>
+    /* Mobile menu toggle styles */
+    .menu-toggle {
+      display: none;
+    }
+
+    @media (max-width: 768px) {
+      .menu-toggle {
+        display: block;
+        cursor: pointer;
+      }
+
+      .nav-links {
+        display: none;
+        flex-direction: column;
+        background: white;
+        position: absolute;
+        top: 70px;
+        right: 0;
+        width: 100%;
+        padding: 1rem 2rem;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+      }
+
+      .nav-links.active {
+        display: flex;
+      }
+
+      .nav-links li {
+        margin: 10px 0;
+      }
+    }
+
+    nav ul li a {
+      color: #2563eb;
+      transition: all 0.3s ease;
+    }
+
+    nav ul li a:hover {
+      color: #1d4ed8;
+      font-weight: bold;
+    }
+  </style>
+</head>
 <body class="bg-gray-100 text-gray-800">
 
   <!-- Header -->
   <header class="bg-white shadow-md sticky top-0 z-50">
-    <div class="container mx-auto px-4 py-4 flex justify-between items-center">
-      <h1 class="text-xl font-bold text-blue-600">Hotel Rajeshwar</h1>
+    <div class="container mx-auto px-4 py-4 flex justify-between items-center relative">
+      <h1 class="text-2xl font-bold text-blue-600">Hotel Rajeshwar</h1>
+
+      <!-- Hamburger Icon (Mobile) -->
+      <div class="menu-toggle md:hidden" onclick="toggleMenu()">
+        <svg class="w-6 h-6 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                d="M4 6h16M4 12h16M4 18h16" />
+        </svg>
+      </div>
+
+      <!-- Navigation -->
       <nav>
-        <ul class="flex space-x-6">
-          <li><a href="index.html" class="text-blue-600 hover:text-blue-700">Home</a></li>
-          <li><a href="rooms.html" class="text-blue-600 hover:text-blue-700">Rooms</a></li>
-          <li><a href="booking.html" class="text-blue-600 font-semibold hover:text-blue-700">Book Now</a></li>
-          <li><a href="contact.html" class="text-blue-600 hover:text-blue-700">Contact</a></li>
+        <ul class="nav-links flex space-x-6 md:flex md:space-x-6 md:static">
+          <li><a href="index.html" class="hover:text-blue-700 text-blue-600">Home</a></li>
+          <li><a href="rooms.html" class="hover:text-blue-700 text-blue-600">Rooms</a></li>
+          <li><a href="booking.html" class="text-blue-600 font-semibold">Book Now</a></li>
+          <li><a href="contact.html" class="hover:text-blue-700 text-blue-600">Contact</a></li>
         </ul>
       </nav>
     </div>
@@ -35,18 +84,9 @@
 
   <!-- Booking Section -->
   <section class="py-12 px-4 max-w-xl mx-auto">
-    <h2 class="text-3xl font-bold mb-6 text-center text-blue-600" data-aos="zoom-in">
-      Online Booking
-    </h2>
-
-    <form
-      action="mailto:hotelrajeshwar01@gmail.com"
-      method="POST"
-      enctype="text/plain"
-      class="bg-white p-6 rounded-xl shadow space-y-4"
-      data-aos="fade-up"
-      data-aos-duration="1000"
-    >
+    <h2 class="text-3xl font-bold mb-6 text-center text-blue-800">Online Booking</h2>
+    <form action="mailto:hotelrajeshwar01@gmail.com" method="POST" enctype="text/plain"
+          class="bg-white p-6 rounded-xl shadow space-y-4">
       <div>
         <label for="name" class="block font-medium mb-1">Full Name</label>
         <input type="text" id="name" name="name" required class="w-full p-2 border rounded" />
@@ -84,15 +124,11 @@
 
       <div>
         <label for="message" class="block font-medium mb-1">Special Requests (Optional)</label>
-        <p class="text-sm text-gray-600 mb-1">
-          If you need more than one room or have special preferences (AC + Non-AC, extra bed, late check-in), please mention them here.
-        </p>
+        <p class="text-sm text-gray-500 mb-1">If you need more than one room or have any special preferences (like AC + Non-AC, extra bed, late check-in), please mention them here.</p>
         <textarea id="message" name="message" rows="4" class="w-full p-2 border rounded"></textarea>
       </div>
 
-      <button type="submit" class="bg-blue-600 hover:bg-blue-700 text-white py-2 px-4 rounded">
-        Submit Booking
-      </button>
+      <button type="submit" class="bg-blue-600 hover:bg-blue-700 text-white py-2 px-4 rounded">Submit Booking</button>
     </form>
   </section>
 
@@ -101,13 +137,14 @@
     &copy; 2025 Hotel Rajeshwar
   </footer>
 
-  <!-- AOS Animation JS -->
-  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <!-- JS for Hamburger Menu -->
   <script>
-    AOS.init();
+    function toggleMenu() {
+      const menu = document.querySelector('.nav-links');
+      menu.classList.toggle('active');
+    }
   </script>
 
-  <!-- Custom JS -->
   <script defer src="booking.js"></script>
 </body>
 </html>
