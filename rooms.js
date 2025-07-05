@@ -1,4 +1,3 @@
-
 document.addEventListener("DOMContentLoaded", () => {
   const roomImages = document.querySelectorAll(".room-img");
   const lightbox = document.getElementById("lightbox");
